@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    int a,b,c,d;
+    scanf("%d%d", &a,&b);
+    scanf("%d%d", &c,&d);
+    printf("Quotient % Reminder %d",a/b,a%b);
+    printf("Quotient % Reminder %",c/d,c%d);
+    return 0;
+}

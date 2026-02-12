@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int value1,value2;
+    scanf("%d%d",&value1,&value2);
+    if ((value1>value2)? value1:value2) {
+    printf("%d is smallest");
+    }
+    else{
+        printf("%d is highest");
+    }
+
+    return 0;
+}

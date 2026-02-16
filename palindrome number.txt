@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int N, original, reverse = 0, remainder;
+    scanf("%d", &N);
+    for(; N > 0; N = N / 10) {
+        remainder = N % 10;
+        reverse = reverse * 10 + remainder;
+    }
+    if(original == reverse)
+        printf("Yes");
+    else
+        printf("No");
+    
+    return 0;
+}
+

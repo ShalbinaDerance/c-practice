@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int N,score;
+    int averagescore=0, count=0,failedsubjects=0;
+    scanf("%d",&N);
+    for(int i=0;i<N;i++){
+        scanf("%d",&score);
+        averagescore+=count;
+        if(score<40){
+            count++;
+        }
+    }
+        printf("Average Score:%d\n",score);
+        printf("Failed Subjects:%d",count);
+  
+    return 0;
+}

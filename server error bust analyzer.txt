@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    int n;
+    scanf("%d", &n);
+    int server, totalerrors = 0, counthours = 0;
+    for(int i = 0; i < n; i++){
+        scanf("%d", &server);
+        if(server >= 50) {
+            totalerrors += server;
+            counthours++;
+        }
+    }
+    printf("Total Errors: %d\n", totalerrors);
+    printf("critical Hours: %d\n", counthours);
+
+    return 0;
+}

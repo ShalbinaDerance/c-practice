@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int N, totaldata, usage,days = 0;;
+    scanf("%d %d",&N, &totaldata);
+    for(int i=0;i<N;i++){
+        scanf("%d",&usage);
+        if(totaldata < usage) break;
+        totaldata -= usage;
+        days++;
+    }
+    printf("Remaining Data:%d\nSuccessful Days: %d", totaldata, days);
+    return 0;
+}

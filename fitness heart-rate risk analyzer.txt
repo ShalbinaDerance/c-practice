@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int heart, N, maxrate = 0, dangerReading = 0;
+    scanf("%d", &N);
+    for(int i=0;i<N;i++) {
+        scanf("%d", &heart);
+        if(i == 0) {
+            maxrate = heart;
+        }
+        if(heart > maxrate) {
+            maxrate = heart;
+        }
+        if(heart > 140) {
+            dangerReading++;
+        }
+    }
+    
+    printf("Max Heart Rate:%d\n", maxrate);
+    printf("Danger Readings:%d\n", dangerReading);
+
+    return 0;
+}

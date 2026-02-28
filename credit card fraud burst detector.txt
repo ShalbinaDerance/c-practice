@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    // Input number of transactions
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    // Input transaction amounts
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    int i = 0;
+    int highValueCount = 0;
+    int consecutiveHigh = 0;
+    int fraudAttempt = -1;
+    
+    // While loop processing
+    while(i < n) {
+        if(arr[i] >= 50000) {
+            highValueCount++;
+            consecutiveHigh++;
+            
+            // Check fraud condition (3 consecutive high-value)
+            if(consecutiveHigh == 3 && fraudAttempt == -1) {
+                fraudAttempt = i + 1; // 1-based index
+            }
+        } else {
+            consecutiveHigh = 0; // reset streak
+        }
+        i++;
+    }
+    
+    // Output
+    if(fraudAttempt != -1) {
+        printf("Fraud Triggered At Attempt: %d\n", fraudAttempt);
+    } else {
+        printf("Fraud Triggered At Attempt: Not Triggered\n");
+    }
+    
+    printf("High-Value Transactions: %d\n", highValueCount);
+    
+    return 0;
+}

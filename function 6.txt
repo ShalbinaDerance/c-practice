@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**int main(){**
+
+    **int num, result;**
+
+    **scanf("%d", \&num);**
+
+    **result = digitSum(num);**
+
+    **printf("%d", result);**
+
+    **return 0;**
+
+**}**
+    **return sum;**
+
+**}**
+**int main(){**
+
+    **int num, result;**
+
+    **scanf("%d", \&num);**
+
+    **result = digitSum(num);**
+
+    **printf("%d", result);**
+
+    **return 0;**
+
+**}**
